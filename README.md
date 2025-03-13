@@ -1,5 +1,8 @@
 # React Dashboard Project
+ 
+git clone https://github.com/Saad0132-ctrl/Dashboard
 
+For Live Demo: https://dashboard-sable-psi-58.vercel.app/
 ## Overview
 This project is a **React-based dashboard application** featuring multiple pages, navigation, and data fetching. It utilizes **React Router** for client-side routing and **Material UI** for UI components.
 
@@ -9,6 +12,7 @@ This project is a **React-based dashboard application** featuring multiple pages
 ✅ **Reusable Components** - Includes a Navbar and Sidebar for consistent layout.  
 ✅ **API Integration** - Fetches product data from FakeStore API.  
 ✅ **Responsive Design** - Adapts to different screen sizes.  
+
 
 ## Technologies Used
 - **React**
