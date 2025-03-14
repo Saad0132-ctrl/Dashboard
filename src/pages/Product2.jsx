@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Navbar from '../components/Navbar'
-import SideNav from '../components/SideNav'
 import {
   Grid,
   CardContent,
@@ -23,33 +21,25 @@ function Product2 () {
   }, [])
   return (
     <div className='product2'>
-      <Navbar />
-      <SideNav />
-      <Box sx={{ p: 9}}>
-       
+      <Box sx={{ p: 9 }}>
         <Grid
           container
           spacing={3}
-          sx={{
-            // display:'flex',
-            // item: 'center',
-            // justifyContent: 'center'
-          }}
+          sx={
+            {
+              // display:'flex',
+              // item: 'center',
+              // justifyContent: 'center'
+            }
+          }
         >
-            
           {data.map(item => (
-            <Grid
-              
-              item
-              xs={12}
-              sm={6}
-            >
+            <Grid item xs={12} sm={6}>
               <Card
                 sx={{
                   bgcolor: '#f9f9f9',
                   borderRadius: 2,
-                  boxShadow: 3,
-                
+                  boxShadow: 3
                 }}
               >
                 <CardMedia

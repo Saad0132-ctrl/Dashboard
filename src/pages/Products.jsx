@@ -1,16 +1,11 @@
 import React from 'react'
-import SideNav from '../components/SideNav'
 import { Box, Card } from '@mui/material'
-import Navbar from '../components/Navbar'
 import { Grid } from '@mui/material'
-import StoreIcon from '@mui/icons-material/Store'
 
 function Products () {
   return (
     <div>
-      <Navbar />
-      <SideNav />
-      <Grid container spacing={2} >
+      <Grid container spacing={2}>
         <Grid item xs={8}>
           <Card
             sx={{
@@ -74,7 +69,7 @@ function Products () {
         <Grid item xs={9}>
           <Card
             sx={{
-              maxWidth: 100+'%'
+              maxWidth: 100 + '%'
             }}
           >
             <div className='container'>

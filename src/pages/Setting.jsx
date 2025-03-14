@@ -1,20 +1,17 @@
 import React from 'react'
-import SideNav from '../components/SideNav'
 import { Box } from '@mui/material'
-import Navbar from '../components/Navbar'
 
-function Setting ({setOpen}) {
+function Setting ({ setOpen }) {
   return (
-    <div >
-      <Navbar  setOpen={setOpen}/>
+    <div>
       <Box sx={{ display: 'flex' }}>
-        <SideNav />
-       
-        <Box component='main' sx={{ flexGrow: 1, p: 3 }}> <h1>Setting</h1></Box>
+        <Box component='main' sx={{ flexGrow: 1, p: 3 }}>
+          {' '}
+          <h1>Setting</h1>
+        </Box>
       </Box>
     </div>
   )
 }
 
 export default Setting
-
