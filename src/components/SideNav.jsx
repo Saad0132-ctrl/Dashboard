@@ -162,6 +162,22 @@ export default function SideNav () {
             <ListItemText primary='Products' sx={{ opacity: open ? 1 : 0 }} />
           </ListItemButton>
         </ListItem>
+        <ListItem
+          disablePadding
+          sx={{ display: 'block' }}
+          onClick={() => navigate('/category')}
+        >
+          <ListItemButton
+            sx={{ justifyContent: open ? 'initial' : 'center', px: 2.5 }}
+          >
+            <ListItemIcon
+              sx={{ justifyContent: 'center', mr: open ? 3 : 'auto' }}
+            >
+              <ProductionQuantityLimitsIcon />
+            </ListItemIcon>
+            <ListItemText primary='Category' sx={{ opacity: open ? 1 : 0 }} />
+          </ListItemButton>
+        </ListItem>
       </Drawer>
       <Navbar setOpen={setOpen} open={open} />
     </Box>

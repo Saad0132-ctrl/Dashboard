@@ -5,6 +5,7 @@ import Products from './pages/Products'
 import Product2 from './pages/Product2'
 import './App.css'
 import Layout from './components/Layout'
+import Category from './pages/Category'
 // import SideNav from './components/SideNa
 import {
   RouterProvider,
@@ -42,6 +43,7 @@ function App () {
         <Route path='setting' element={<Setting />} />
         <Route path='products' element={<Products />} />
         <Route path='product2' element={<Product2 />} />
+        <Route path='/category' element={<Category/>} />
       </Route>
     )
   )
