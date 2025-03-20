@@ -4,16 +4,16 @@ import { axisClasses } from '@mui/x-charts/ChartsAxis'
 import { dataset, valueFormatter } from './Dataset'
 
 const chartSetting = {
-  // yAxis: [
-  //   {
-  //     label: 'rainfall (mm)',
-  //   },
-  // ],
-  width: 500,
+  yAxis: [
+    {
+      label: 'rainfall (mm)',
+    },
+  ],
+  width: 700,
   height: 300,
   sx: {
     [`.${axisClasses.left} .${axisClasses.label}`]: {
-      transform: 'translate(-20px, 0)'
+      transform: 'translate(-10px, 0)'
     }
   }
 }
@@ -21,15 +21,15 @@ const chartSetting = {
 export default function BarsDataset () {
   return (
     <BarChart
-      dataset={dataset}
-      xAxis={[{ scaleType: 'band', dataKey: 'month' }]}
-      series={[
-        { dataKey: 'london', label: 'London', valueFormatter },
-        { dataKey: 'paris', label: 'Paris', valueFormatter },
-        { dataKey: 'newYork', label: 'New York', valueFormatter },
-        { dataKey: 'seoul', label: 'Seoul', valueFormatter }
-      ]}
-      {...chartSetting}
-    />
+    dataset={dataset}
+    xAxis={[{ scaleType: 'band', dataKey: 'month' }]}
+    series={[
+      { dataKey: 'london', label: 'London', valueFormatter },
+      { dataKey: 'paris', label: 'Paris', valueFormatter },
+      { dataKey: 'newYork', label: 'New York', valueFormatter },
+      { dataKey: 'seoul', label: 'Seoul', valueFormatter },
+    ]}
+    {...chartSetting}
+  />
   )
 }
