@@ -4,14 +4,15 @@ import { Box, Stack } from '@mui/material'
 import Navbar from '../components/Navbar'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
-import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
 import './styles.css'
 import StoreIcon from '@mui/icons-material/Store'
 import New from '../components/New'
 import BarsDataset from '../components/BarsDataset'
+import { PieChart } from '@mui/x-charts/PieChart';
+import GaugeChart from '../components/GaugeChart'
 
-function Home ({ setOpen }) {
+function Home({ setOpen }) {
   return (
     <div className='ok'>
       <Navbar setOpen={setOpen} />
@@ -41,31 +42,31 @@ function Home ({ setOpen }) {
               <Stack direction='row' marginBottom={2}>
                 <Card
                   sx={{
-                    maxWidth: '90',
                     background:
                       'linear-gradient(135deg, #0d47a1, #1976d2, #26a69a, #2ecc71)',
-
                     color: 'white'
                   }}
                 >
                   <CardContent>
-                    <Typography gutterBottom variant='h5' component='div'>
-                      Lizard
-                    </Typography>
-                    <Typography
-                      variant='body2'
-                      sx={{ color: 'text.secondary' }}
-                    >
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarcticaa
-                    </Typography>
+                    <PieChart
+                      series={[
+                        {
+                          data: [
+                            { id: 0, value: 10, label: 'series A' },
+                            { id: 1, value: 15, label: 'series B' },
+                            { id: 2, value: 20, label: 'series C' },
+                          ],
+                        },
+                      ]}
+                      width={400}
+                      height={200}
+                    />
                   </CardContent>
                 </Card>
 
                 <Card
                   sx={{
-                    maxWidth: 90 + '%',
+
                     color: 'white',
                     marginLeft: 2,
                     background: 'linear-gradient(45deg, #00c853, #b2ff59)'
@@ -73,27 +74,16 @@ function Home ({ setOpen }) {
                   className='colo'
                 >
                   <CardContent>
-                    <Typography gutterBottom variant='h5' component='div'>
-                      Lizard
-                    </Typography>
-                    <Typography
-                      variant='body2'
-                      sx={{ color: 'text.secondary' }}
-                    >
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
-                    </Typography>
+                    <GaugeChart />
                   </CardContent>
                 </Card>
               </Stack>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={4}>
               <Stack spacing={1}>
                 <Card
                   sx={{
-                    maxWidth: 345,
-                    background:
+                    height:'6rem',                   background:
                       'linear-gradient(135deg, #0d47a1, #1976d2, #42a5f5, #90caf9)'
                   }}
                 >
@@ -105,7 +95,7 @@ function Home ({ setOpen }) {
                 </Card>
                 <Card
                   sx={{
-                    maxWidth: 345,
+                    height:'6rem', 
                     background:
                       'linear-gradient(135deg, #0d47a1, #1976d2, #42a5f5, #90caf9)'
                   }}
@@ -120,9 +110,9 @@ function Home ({ setOpen }) {
             </Grid>
           </Grid>
           <Grid container spacing={1}>
-            <Grid item xs={8}>
-              <Card sx={{ height: 50 + 'vh' }}>
-                <CardContent sx={{ marginLeft: 5 + '%' }}>
+            <Grid xs={8} >
+              <Card sx={{ width: 100 + '%', }}>
+                <CardContent>
                   <BarsDataset />
                 </CardContent>
               </Card>

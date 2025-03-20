@@ -39,7 +39,11 @@ function Product2 () {
                 sx={{
                   bgcolor: '#f9f9f9',
                   borderRadius: 2,
-                  boxShadow: 3
+                  boxShadow: 3,
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
                 }}
               >
                 <CardMedia
@@ -47,14 +51,19 @@ function Product2 () {
                   height='100'
                   width='100'
                   image={item.image}
-                  sx={{ objectFit: 'contain', padding: 2 }}
+                  sx={{
+                    height: 180,
+                    objectFit: 'contain',
+                    padding: 2,
+                  }}
                 />
                 <CardContent>
                   <Typography
                     gutterBottom
                     variant='h5'
                     component='div'
-                    sx={{ height: 50 }}
+                    
+                    sx={{ height: 60 }}
                   >
                     {item.title}
                   </Typography>
