@@ -9,10 +9,10 @@ import {
 } from '@mui/material'
 import Card from '@mui/material/Card'
 
-function Product2 () {
+function Product2() {
   const [data, setData] = useState([])
   useEffect(() => {
-    async function fetchData () {
+    async function fetchData() {
       let output = await fetch('https://fakestoreapi.com/products')
       let res = await output.json()
       setData(res)
@@ -62,7 +62,7 @@ function Product2 () {
                     gutterBottom
                     variant='h5'
                     component='div'
-                    
+
                     sx={{ height: 60 }}
                   >
                     {item.title}

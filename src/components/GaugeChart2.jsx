@@ -7,7 +7,7 @@ const settings = {
   value: 60,
 };
 
-export default function GaugeChart() {
+export default function GaugeChart2() {
   return (
     <Gauge
       {...settings}
@@ -18,7 +18,7 @@ export default function GaugeChart() {
           fontSize: 24,
         },
         [`& .${gaugeClasses.valueArc}`]: {
-          fill: 'blue',
+          fill: 'yellow',
         },
         [`& .${gaugeClasses.referenceArc}`]: {
           fill: 'gray', 
@@ -34,7 +34,7 @@ export default function GaugeChart() {
         fill="white" 
         fontWeight="bold"
       >
-        New Visits
+        New Orders
       </text>
       </Gauge>
   );

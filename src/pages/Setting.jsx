@@ -1,17 +1,11 @@
-import React from 'react'
-import { Box } from '@mui/material'
+import React from 'react';
 
-function Setting ({ setOpen }) {
+function Setting({ setOpen }) {
   return (
-    <div>
-      <Box sx={{ display: 'flex' }}>
-        <Box component='main' sx={{ flexGrow: 1, p: 3 }}>
-          {' '}
-          <h1>Setting</h1>
-        </Box>
-      </Box>
+    <div className="flex items-center justify-center h-screen">
+      <h1 className="text-2xl font-bold">Setting</h1>
     </div>
-  )
+  );
 }
 
-export default Setting
+export default Setting;
