@@ -18,8 +18,8 @@ import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import GaugeChart2 from '../components/GaugeChart2'
 import GaugeChart3 from '../components/GaugeChart3'
 import TrendingDownIcon from '@mui/icons-material/TrendingDown';
+import Pi from '../components/Pi'
 // import { TextField } from '@mui/material'
-
 function Home({ setOpen }) {
   return (
     <div className='ok'>
@@ -46,8 +46,8 @@ function Home({ setOpen }) {
           {/* <h1>Home</h1> */}
 
           <Stack direction={{ xs: 'column', md: 'row' }} marginBottom={2} marginTop={2} justifyContent="space-between" width="100%">
-            <Card sx={{ width: { xs: '100%', md: 350 } ,marginTop:{xs: 2, md: 0} }}>
-              <div className="px-6 flex flex-row items-center justify-between text-left p-3">
+            <Card sx={{ width: { xs: '100%', md: 390 }, marginTop: { xs: 2, md: 0 } }}>
+              {/* <div className="px-6 flex flex-row items-center justify-between text-left p-3">
                 <div className='flex flex-col '>
 
                   <h1 className="font-semibold text-lg">Visits</h1>
@@ -64,7 +64,9 @@ function Home({ setOpen }) {
                 <div>
                   <GaugeChart />
                 </div>
-              </div>
+              </div> */}
+              <Pi />
+
             </Card>
             {/* <Card
                   sx={{
@@ -87,7 +89,7 @@ function Home({ setOpen }) {
                     />
                   </CardContent>
                 </Card> */}
-            <Card  sx={{ width: { xs: '100%', md: 350 },marginTop:{xs: 2, md: 0}  }}>
+            <Card sx={{ width: { xs: '100%', md: 350 }, marginTop: { xs: 2, md: 0 } }}>
               <div className="px-6 flex flex-row items-center justify-between text-left p-3">
                 <div className='flex flex-col '>
 
@@ -121,7 +123,7 @@ function Home({ setOpen }) {
                   </CardContent>
                 </Card> */}
 
-            <Card  sx={{ width: { xs: '100%', md: 350 },marginTop:{xs: 2, md: 0}  }}>
+            <Card sx={{ width: { xs: '100%', md: 350 }, marginTop: { xs: 2, md: 0 } }}>
               <div className="px-6 flex flex-row items-center justify-between text-left p-3">
                 <div className='flex flex-col '>
 
@@ -142,75 +144,75 @@ function Home({ setOpen }) {
             </Card>
           </Stack>
 
-          
-              {/* <Card sx={{ width: 100 + '%', }}>
+
+          {/* <Card sx={{ width: 100 + '%', }}>
                 <div>
                   <BarsDataset />
 
                 </div>
               </Card> */}
-              <Stack  direction={{ xs: 'column', md: 'row' }} marginBottom={2} marginTop={2} justifyContent="space-between" width="100%"> 
-              <Card sx={{ width: { xs: '100%', md: '66.5%' }  }}>
-                {/* Title and Filters */}
-                <div className="flex justify-between items-center p-2">
-                  <h2>Revenue</h2>
-                  <div className="flex gap-2 items-center">
+          <Stack direction={{ xs: 'column', md: 'row' }} marginBottom={2} marginTop={2} justifyContent="space-between" width="100%">
+            <Card sx={{ width: { xs: '100%', md: '66.5%' } }}>
+              {/* Title and Filters */}
+              <div className="flex justify-between items-center p-2">
+                <h2>Revenue</h2>
+                <div className="flex gap-2 items-center">
 
-                    <select name="" id="" className='border border-gray-300 rounded-md p-1'>
-                      <option value="weekly" className=''>01.12.18 / 07.12.18</option>
-                    </select>
-                    <select name="" id="" className='border border-gray-300 rounded-md p-1'>
-                      <option value="weekly" className=''>Weekly</option>
-                    </select>
-                  </div>
+                  <select name="" id="" className='border border-gray-300 rounded-md p-1'>
+                    <option value="weekly" className=''>01.12.18 / 07.12.18</option>
+                  </select>
+                  <select name="" id="" className='border border-gray-300 rounded-md p-1'>
+                    <option value="weekly" className=''>Weekly</option>
+                  </select>
                 </div>
+              </div>
 
-                {/* Current & Previous Week Stats */}
-                <div className="flex justify-between p-2">
-                  <div>
-                    <p style={{ color: 'red', fontWeight: 'bold' }}>$180</p>
-                    <p style={{ color: 'green' }}>+5%</p>
-                  </div>
-                  <div>
-                    <p style={{ color: 'gray' }}>$52.30</p>
-                    <p style={{ color: 'red' }}>-2%</p>
-                  </div>
-                </div>
-
-                {/* Bar Chart */}
+              {/* Current & Previous Week Stats */}
+              <div className="flex justify-between p-2">
                 <div>
-                  <BarsDataset />
+                  <p style={{ color: 'red', fontWeight: 'bold' }}>$180</p>
+                  <p style={{ color: 'green' }}>+5%</p>
                 </div>
-              </Card>
+                <div>
+                  <p style={{ color: 'gray' }}>$52.30</p>
+                  <p style={{ color: 'red' }}>-2%</p>
+                </div>
+              </div>
 
-        
-              <Card sx={{  width: { xs: '100%', md: '32.5%' },  marginTop: { xs: '20px', md: '0px' }   }}>
-                {/* <CardContent>
+              {/* Bar Chart */}
+              <div>
+                <BarsDataset />
+              </div>
+            </Card>
+
+
+            <Card sx={{ width: { xs: '100%', md: '32.5%' }, marginTop: { xs: '20px', md: '0px' } }}>
+              {/* <CardContent>
                   <Piechart2/>
                 </CardContent> */}
-                <div className='flex flex-col justify-between h-full '>
-                  <div className='flex justify-between p-3'><h1>Profit</h1>
-                    <p className='text-sm text-gray-500 font-bold'>...</p></div>
-                  <div className='m-auto p-6'>
-                    <Piechart2 />
+              <div className='flex flex-col justify-between h-full '>
+                <div className='flex justify-between p-3'><h1>Profit</h1>
+                  <p className='text-sm text-gray-500 font-bold'>...</p></div>
+                <div className='m-auto p-6'>
+                  <Piechart2 />
+                </div>
+                <hr />
+                <div className='flex justify-between p-3'>
+                  <div className='flex flex-col text-left'>
+                    <p className='text-sm  font-bold'> <FiberManualRecordIcon sx={{ color: "red", fontSize: 12, marginRight: 1 }} />
+                      Current</p>
+                    <p className='text-sm  font-bold'><FiberManualRecordIcon sx={{ color: "blue", fontSize: 12, marginRight: 1 }} />Target</p>
+                    <p className='text-sm  font-bold'> <FiberManualRecordIcon sx={{ color: "yellow", fontSize: 12, marginRight: 1 }} />Lost</p>
                   </div>
-                  <hr />
-                  <div className='flex justify-between p-3'>
-                    <div className='flex flex-col text-left'>
-                      <p className='text-sm  font-bold'> <FiberManualRecordIcon sx={{ color: "red", fontSize: 12, marginRight: 1 }} />
-                        Current</p>
-                      <p className='text-sm  font-bold'><FiberManualRecordIcon sx={{ color: "blue", fontSize: 12, marginRight: 1 }} />Target</p>
-                      <p className='text-sm  font-bold'> <FiberManualRecordIcon sx={{ color: "yellow", fontSize: 12, marginRight: 1 }} />Lost</p>
-                    </div>
-                    <div>
-                      <p>$500 <span className=" text-xs">37%</span></p>
-                      <p>$450 <span className=" text-xs">35%</span></p>
-                      <p>$300 <span className=" text-xs">28%</span></p>
-                    </div>
+                  <div>
+                    <p>$500 <span className=" text-xs">37%</span></p>
+                    <p>$450 <span className=" text-xs">35%</span></p>
+                    <p>$300 <span className=" text-xs">28%</span></p>
                   </div>
                 </div>
-              </Card>
-              </Stack>
+              </div>
+            </Card>
+          </Stack>
         </Box>
       </Box>
     </div>
